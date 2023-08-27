@@ -10,6 +10,6 @@ RUN apt-get update && \
     apt-get install -y git cmake ninja-build python3 python3-pip ccache bzip2 wget && \
     apt-get clean
 RUN pip3 install pyelftools
-RUN wget -qO- https://developer.arm.com/-/media/Files/downloads/gnu-rm/10.3-2021.10/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux.tar.bz2 | tar -xj
+RUN wget -qO- https://armkeil.blob.core.windows.net/developer/Files/downloads/gnu/12.3.rel1/binrel/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi.tar.xz | tar -xvJ
 
-ENV PATH "/work/gcc-arm-none-eabi-10.3-2021.10/bin:$PATH"
+ENV PATH "/work/arm-gnu-toolchain-12.3.rel1-x86_64-arm-none-eabi/bin:$PATH"
